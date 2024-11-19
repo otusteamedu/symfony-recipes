@@ -1,0 +1,32 @@
+{
+  "manifests": {
+    "otusteamedu/statsd-bundle": {
+      "manifest": {
+        "bundles": {
+          "StatsdBundle\\StatsdBundle": ["all"]
+        },
+        "copy-from-recipe": {
+          "config/": "%CONFIG_DIR%"
+        },
+        "env": {
+          "STATSD_HOST": "graphite",
+          "STATSD_PORT": "8125",
+          "STATSD_NAMESPACE": "my_app"
+        }
+      },
+      "files": {
+        "config/packages/statsd.yaml": {
+          "contents": [
+            "statsd:",
+            "  client:",
+            "    host: '%env(STATSD_HOST)%'",
+            "    port: '%env(STATSD_PORT)%'",
+            "    namespace: '%env(STATSD_NAMESPACE)%'"
+          ],
+          "executable": false
+        }
+      },
+      "ref": "35e18ca78b9718d2afca62b3ec670ad36e77195c"
+    }
+  }
+}

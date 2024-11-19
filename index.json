@@ -1,0 +1,14 @@
+{
+  "recipes": {
+    "otusteamedu/statsd-bundle": [
+      "1.0"
+    ]
+  },
+  "branch": "main",
+  "is_contrib": true,
+  "_links": {
+    "repository": "github.com/otusteamedu/symfony-recipes/",
+    "origin_template": "{package}:{version}@github.com/otusteamedu/symfony-recipes:main",
+    "recipe_template": "https://api.github.com/repos/otusteamedu/symfony-recipes/contents/statsd.bundle.1.0.json"
+  }
+}
